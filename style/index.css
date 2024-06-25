@@ -1,0 +1,78 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+:root {
+    --FONT_PRIMARY: Helvetica, Arial, sans-serif;
+    --BACKGROUND_ACCENT: #FF5733;
+    --BACKGROUND_ACCENT_HOVER: #FF6F50;
+    --BACKGROUND_LIGHT_X: #F8F9FA;
+    --BACKGROUND_LIGHT: #635985;
+    --BACKGROUND_MEDIUM: #393053;
+    --BACKGROUND_DARK: #18122B;
+    --TEXT_PRIMARY: #F0DBD1; 
+    --TEXT_LINK: #008CBA;
+    --TEXT_LINK_VISITED: #008CBA;
+    --TEXT_LINK_HOVER: #0395fd;
+    --TEXT_LINK_ACTIVE: #6c757d;
+}
+
+body {
+    background-color: var(--BACKGROUND_DARK);
+    color: var(--TEXT_PRIMARY);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+header, footer {
+    padding: 4px 8px;
+}
+
+main {
+    padding: 8px 5%;
+    background-color: var(--BACKGROUND_MEDIUM);
+    flex-grow: 1;
+}
+
+.rowContainer {
+    display: flex;
+}
+
+.centerContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    margin-top: auto;
+}
+
+.remoteLink {
+    text-decoration: none;
+    color: var(--TEXT_LINK);
+}
+
+.remoteLink:hover {
+    text-decoration: none;
+    color: var(--TEXT_LINK_HOVER);
+    text-decoration: underline;
+}
+
+.remoteLink:visited {
+    text-decoration: none;
+    color: var(--TEXT_LINK_VISITED);
+}
+
+@media (min-width: 900px) {
+    main {
+        padding: 8px 20%;
+    }
+}
+
+@media (min-width: 600px) {
+    main {
+        padding: 8px 10%;
+    }
+}
